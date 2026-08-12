@@ -1,73 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yessica Jaramillo - Portafolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-      <div class="wrap">
-    <header>
-      <div class="logo">
-        <div class="marca">Yessica Jaramillo</div>
+  <div class="wrap">
+    
+    <!-- ── NAVBAR ── -->
+    <header class="navbar-container">
+      <div class="logo-wrapper">
+        <span class="code-icon">&lt;/&gt;</span>
+        <span class="logo-name">
+          Yessica <span class="logo-gradient">Jaramillo</span>
+        </span>
       </div>
       
-      <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#experiencia">Experiencia</a>
-        <a href="#proyectos-destacados">Proyectos</a>
-        <a href="#programas">Programas</a>
-        <a href="#tu-proyecto">Contacto</a>
+      <nav class="nav-links">
+        <a href="#inicio" class="nav-item active">Inicio<span class="nav-active-indicator"></span></a>
+        <a href="#experiencia" class="nav-item">Experiencia</a>
+        <a href="#slider" class="nav-item">Proyectos</a>
+        <a href="#proyectos-destacados" class="nav-item">Destacados</a>
+        <a href="#tu-proyecto" class="nav-item">Contacto</a>
       </nav>
+
+      <div class="nav-right">
+        <a href="#contacto" class="btn-cv" onclick="alert('Descargando currículum vitae de Yessica Jaramillo...'); return false;">
+          📥 <span>Descargar CV</span>
+        </a>
+      </div>
     </header>
 
     <main>
-      <section id="inicio" class="hero">
-        <aside class="contenido" id="contenido">
-          <div class="texto">
-            <div class="status-badge">
-              <div class="status-dot"></div>
-              Disponible para nuevos proyectos
+      <!-- ── HERO PRINCIPAL ── -->
+      <section id="inicio" class="hero-section">
+        <div class="hero-grid">
+          
+          <!-- COLUMNA IZQUIERDA -->
+          <div class="hero-left-content">
+            <div class="status-badge-neon">
+              <span class="status-dot-pulse"></span>
+              <span class="badge-text">Disponible para nuevos proyectos</span>
+              <span class="badge-sparkle">✨</span>
             </div>
-            
-            <h1><br>
-              <span class="highlight">Aprendiz SENA</span><br>
-              Tecnólogo ADSO
-            </h1>
-            
-            <p>
-              Apasionada por el desarrollo de software y la creación de soluciones web modernas. Formándome en el tecnólogo en <strong>Análisis y Desarrollo de Software (ADSO)</strong> en el SENA, con competencias en desarrollo Frontend, Backend, diseño de interfaces y arquitectura de aplicaciones web robustas.
+
+            <div class="hero-heading">
+              <p class="greeting-text">Hola, soy</p>
+              <h1 class="hero-full-name">
+                Yessica <span class="gradient-text-name">Jaramillo</span>
+              </h1>
+              <div class="neon-divider-line"></div>
+            </div>
+
+            <div class="hero-role-title">
+              <span class="sena-tag">Aprendiz SENA</span>
+              <span class="role-separator">|</span>
+              <span class="adso-tag">Tecnólogo ADSO</span>
+            </div>
+
+            <p class="hero-description">
+              Apasionada por el desarrollo de software y la creación de soluciones web modernas.
+              Me especializo en <strong class="highlight-adso">Análisis y Desarrollo de Software (ADSO)</strong> en el SENA, con enfoque en desarrollo Frontend, Backend y diseño de interfaces intuitivas y arquitecturas de aplicaciones web robustas.
             </p>
 
-            <div class="skills-chips">
-              <span class="skill-chip">JavaScript</span>
-              <span class="skill-chip">React</span>
-              <span class="skill-chip">Node.js</span>
-              <span class="skill-chip">Express</span>
-              <span class="skill-chip">MongoDB</span>
-              <span class="skill-chip">MySQL</span>
-              <span class="skill-chip">Git / GitHub</span>
-              <span class="skill-chip">APIs REST</span>
+            <!-- Badges Tecnologías -->
+            <div class="tech-chips-wrapper">
+              <div class="tech-chip-item"><span class="tech-chip-icon">🟨</span><span class="tech-chip-name">JavaScript</span></div>
+              <div class="tech-chip-item"><span class="tech-chip-icon">⚛</span><span class="tech-chip-name">React</span></div>
+              <div class="tech-chip-item"><span class="tech-chip-icon">🟢</span><span class="tech-chip-name">Node.js</span></div>
+              <div class="tech-chip-item"><span class="tech-chip-icon">⚡</span><span class="tech-chip-name">Express</span></div>
+              <div class="tech-chip-item"><span class="tech-chip-icon">🍃</span><span class="tech-chip-name">MongoDB</span></div>
+              <div class="tech-chip-item"><span class="tech-chip-icon">🐬</span><span class="tech-chip-name">MySQL</span></div>
+              <div class="tech-chip-item"><span class="tech-chip-icon">☁</span><span class="tech-chip-name">APIs REST</span></div>
+              <div class="tech-chip-item"><span class="tech-chip-icon">🐙</span><span class="tech-chip-name">Git / GitHub</span></div>
             </div>
 
-            <div class="buttons-row" style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px;">
-              <a href="#tu-proyecto" class="btn primary">Trabajemos juntos</a>
-              <a href="#experiencia" class="btn">Ver mis proyectos</a>
+            <!-- Botones CTA -->
+            <div class="hero-cta-group">
+              <a href="#tu-proyecto" class="btn-cta primary-glow">
+                🚀 <span>Trabajemos juntos</span>
+              </a>
+              <a href="#experiencia" class="btn-cta secondary-outline">
+                👁 <span>Ver mis proyectos</span>
+              </a>
             </div>
           </div>
-        </aside>
-        <aside class="widgets-container" id="foto">
-          <img src="imagen/gafas.png" alt="Foto de perfil Yessica Jaramillo - Aprendiz SENA">
-        </aside>
+
+          <!-- COLUMNA DERECHA -->
+          <div class="hero-right-card">
+            <div class="profile-glass-card">
+              <div class="floating-shape shape-1"></div>
+              <div class="floating-shape shape-2"></div>
+              <div class="floating-dot dot-1"></div>
+              <div class="floating-dot dot-2"></div>
+
+              <div class="profile-image-oval-wrapper">
+                <div class="neon-halo-ring"></div>
+                <div class="neon-halo-secondary"></div>
+                <img src="imagen/gafas.png" alt="Foto de perfil Yessica Jaramillo - Aprendiz SENA ADSO" class="profile-oval-photo">
+              </div>
+
+              <!-- Panel 3 Columnas -->
+              <div class="skills-subpanel-grid">
+                <div class="subpanel-col">
+                  <div class="subpanel-icon-circle purple-glow">&lt;/&gt;</div>
+                  <h4 class="subpanel-title">Desarrollo</h4>
+                  <p class="subpanel-desc">Web Full Stack</p>
+                </div>
+                <div class="subpanel-divider"></div>
+                <div class="subpanel-col">
+                  <div class="subpanel-icon-circle violet-glow">💻</div>
+                  <h4 class="subpanel-title">Interfaces</h4>
+                  <p class="subpanel-desc">Intuitivas</p>
+                </div>
+                <div class="subpanel-divider"></div>
+                <div class="subpanel-col">
+                  <div class="subpanel-icon-circle fuchsia-glow">⚡</div>
+                  <h4 class="subpanel-title">Soluciones</h4>
+                  <p class="subpanel-desc">Efectivas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- BANNER DE VALORES -->
+        <div class="values-banner-card">
+          <div class="value-item-box">
+            <div class="value-icon-wrapper">🎯</div>
+            <div class="value-text-group">
+              <h4 class="value-title">Enfoque en soluciones</h4>
+              <p class="value-description">Desarrollo aplicaciones que resuelven problemas reales.</p>
+            </div>
+          </div>
+          <div class="value-item-box">
+            <div class="value-icon-wrapper">🎓</div>
+            <div class="value-text-group">
+              <h4 class="value-title">Aprendizaje continuo</h4>
+              <p class="value-description">Siempre explorando nuevas tecnologías y metodologías.</p>
+            </div>
+          </div>
+          <div class="value-item-box">
+            <div class="value-icon-wrapper">👥</div>
+            <div class="value-text-group">
+              <h4 class="value-title">Trabajo en equipo</h4>
+              <p class="value-description">Colaboración efectiva para lograr los mejores resultados.</p>
+            </div>
+          </div>
+          <div class="value-item-box">
+            <div class="value-icon-wrapper">⚡</div>
+            <div class="value-text-group">
+              <h4 class="value-title">Pasión por el código</h4>
+              <p class="value-description">Convertir ideas en código funcional y elegante.</p>
+            </div>
+          </div>
+        </div>
       </section>
 
+      <!-- ── PROYECTOS & EXPERIENCIA ── -->
       <section id="experiencia" class="experience">
         <h2 class="section-title">Proyectos & Experiencia del Aprendiz</h2>
         
         <div class="projects-grid">
-          <!-- PROYECTO PRINCIPAL 1: SIGEP-Turnos -->
-          <article class="project-card featured-card fade-up" draggable="true">
+          <!-- SIGEP-Turnos -->
+          <article class="project-card featured-card fade-up">
             <div class="project-card-header">
               <h3>🏢 SIGEP-Turnos</h3>
               <span class="project-tagline">Plataforma Web para Gestión y Control de Turnos</span>
@@ -108,8 +210,8 @@
             </div>
           </article>
 
-          <!-- PROYECTO PRINCIPAL 2: KASSY -->
-          <article class="project-card featured-card fade-up" draggable="true">
+          <!-- KASSY -->
+          <article class="project-card featured-card fade-up">
             <div class="project-card-header">
               <h3>🎓 KASSY</h3>
               <span class="project-tagline">Plataforma Web de Gestión de Procesos Académicos</span>
@@ -147,80 +249,71 @@
             </div>
           </article>
         </div>
-        <p class="hint-text" style="text-align: center; margin-top: 18px; color: purple; font-size: 0.9rem;">
-          💡 Arrastra las tarjetas para reordenarlas a tu gusto
-        </p>
       </section>
 
-      <section id="slider" class="slider">
-        <div class="slider">
-            <h1 class="titulo">Mis Proyectos</h1>
-            <br>
-    <div class="img">
-      <section><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2SgUP564PlawSTNAUq9xyUc3b55f__1OarA&s"></section>
-      <section><img src="https://images.unsplash.com/photo-1729508419473-b2d296bffbb2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHx8"></section>
-      <section><img src="https://static.vecteezy.com/system/resources/thumbnails/009/273/280/small/concept-of-loneliness-and-disappointment-in-love-sad-man-sitting-element-of-the-picture-is-decorated-by-nasa-free-photo.jpg"></section>
-    </div>
-</div>
-  <div>
-    <button id="btnizquierda"><</button>
-    <button id="btnderecha"> > </button>
-  </div>
+      <!-- ── SLIDER DE PROYECTOS ── -->
+      <section id="slider" class="slider-section">
+        <h2 class="section-title">Galería de Proyectos</h2>
+        <div class="slider-wrapper">
+          <div class="slider-track">
+            <div class="slider-slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2SgUP564PlawSTNAUq9xyUc3b55f__1OarA&s" alt="Proyecto 1"></div>
+            <div class="slider-slide"><img src="https://images.unsplash.com/photo-1729508419473-b2d296bffbb2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHx8" alt="Proyecto 2"></div>
+            <div class="slider-slide"><img src="https://static.vecteezy.com/system/resources/thumbnails/009/273/280/small/concept-of-loneliness-and-disappointment-in-love-sad-man-sitting-element-of-the-picture-is-decorated-by-nasa-free-photo.jpg" alt="Proyecto 3"></div>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn" id="btnizquierda">&lt;</button>
+          <button class="slider-btn" id="btnderecha">&gt;</button>
+        </div>
       </section>
-<br>
-<br>
 
-<section id="proyectos-destacados" class="proyectos-destacados">
-        <h2 class="section-title">Proyectos Destacados</h2>
-<aside class="widgets-container">
+      <!-- ── DESTACADOS ── -->
+      <section id="proyectos-destacados" class="proyectos-destacados">
+        <h2 class="section-title">Herramientas Desarrolladas</h2>
+        <div class="widgets-container">
           <div class="widgets-grid">
             <div class="widget fade-up">
               <div class="widget-icon">🧮</div>
               <h3>Calculadora</h3>
               <p>Herramientas matemáticas</p>
             </div>
-            
             <div class="widget fade-up">
               <div class="widget-icon">🔐</div>
               <h3>Generador de Contraseñas</h3>
               <p>Seguridad avanzada</p>
             </div>
-            
             <div class="widget fade-up">
               <div class="widget-icon">⏱️</div>
               <h3>Cronómetro</h3>
               <p>Control de tiempo</p>
             </div>
           </div>
-        </aside>
-    </section>
-<br>
-<br>
-      <section id="tu-proyecto" class="tu-proyecto">
-        <aside class="widgets-container">
-        <div class="contact-form">
-            <h3>Hablemos de tu proyecto</h3>
-            <form id="contactForm">
-              <div class="form-grid">
-                <input type="text" placeholder="Tu nombre" required>
-                <input type="email" placeholder="Tu email" required>
-              </div>
-              <button type="submit" class="submit-btn">Enviar mensaje</button>
-            </form>
-            </div>
-            </aside>
+        </div>
       </section>
+
+      <!-- ── CONTACTO ── -->
+      <section id="tu-proyecto" class="contact-section">
+        <div class="contact-card">
+          <h3>Hablemos de tu proyecto</h3>
+          <form id="contactForm">
+            <div class="form-grid">
+              <input type="text" class="form-input" placeholder="Tu nombre" required>
+              <input type="email" class="form-input" placeholder="Tu email" required>
+            </div>
+            <button type="submit" class="submit-btn">Enviar mensaje</button>
+          </form>
+        </div>
+      </section>
+
     </main>
 
     <footer>
       <div class="footer-content">
         <div>
-          <div class="marca">Yessica Jaramillo</div>
-            Aprendiz del Sena y sus avances
-          </div>
+          <strong>Yessica Jaramillo</strong> — Aprendiz SENA ADSO
         </div>
         <div>
-          Instructor lider Oscar Castro
+          Instructor líder Oscar Castro
         </div>
       </div>
     </footer>
