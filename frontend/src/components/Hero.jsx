@@ -98,11 +98,11 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* ── COLUMNA DERECHA: TARJETA DE PERFIL CON ARO NEON Y PANEL ── */}
+        {/* ── COLUMNA DERECHA: TARJETA DE PERFIL REFINADA (65% FOTO / 25% PANEL) ── */}
         <div className="hero-right-card">
           <div className="profile-glass-card">
             
-            {/* Elementos decorativos de fondo flotantes idénticos a la referencia */}
+            {/* Elementos decorativos de fondo sutiles */}
             <div className="floating-shape shape-left-diamond"></div>
             <div className="floating-shape shape-right-diamond"></div>
             <div className="floating-dot dot-top-left"></div>
@@ -110,7 +110,7 @@ export default function Hero() {
             <div className="floating-dot dot-mid-right"></div>
             <div className="floating-dot dot-bottom-left"></div>
 
-            {/* Contenedor central de la foto con Halo Ovalado Neon 360° */}
+            {/* Contenedor central de la foto con Marco Ovalado y Halo Elegante */}
             <div className="profile-image-oval-wrapper">
               <div className="neon-halo-glow-bg"></div>
               <div className="neon-halo-border-ring"></div>
@@ -121,7 +121,7 @@ export default function Hero() {
               />
             </div>
 
-            {/* Panel Inferior de Habilidades (3 Columnas sin círculos, directo como en la foto) */}
+            {/* Panel Inferior de Habilidades (Separado limpiamente, compacto y estilizado) */}
             <div className="skills-subpanel-grid">
               <div className="subpanel-col">
                 <div className="subpanel-direct-icon code-color">&lt;/&gt;</div>
@@ -133,7 +133,7 @@ export default function Hero() {
 
               <div className="subpanel-col">
                 <div className="subpanel-direct-icon monitor-color">
-                  <Monitor size={22} />
+                  <Monitor size={19} />
                 </div>
                 <h4 className="subpanel-title">Interfaces</h4>
                 <p className="subpanel-desc">Intuitivas</p>
@@ -143,7 +143,7 @@ export default function Hero() {
 
               <div className="subpanel-col">
                 <div className="subpanel-direct-icon zap-color">
-                  <Zap size={22} />
+                  <Zap size={19} />
                 </div>
                 <h4 className="subpanel-title">Soluciones</h4>
                 <p className="subpanel-desc">Efectivas</p>
