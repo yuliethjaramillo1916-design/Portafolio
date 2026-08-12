@@ -188,7 +188,7 @@ nav a:hover {
   align-items: center;
   background: var(--card-bg);
   border: 1px solid rgba(168, 85, 247, 0.5);
-  border-radius: 20px;
+  border-radius: 24px;
   padding: 30px;
   backdrop-filter: blur(10px);
   animation: pulso 4s infinite ease-in-out;
@@ -196,9 +196,21 @@ nav a:hover {
 
 #foto img {
   width: 250px;
-  height: 250px;
-  border-radius: 15px;
+  height: 320px;
+  border-radius: 50%;
   object-fit: cover;
+  object-position: center top;
+  border: 3px solid rgba(168, 85, 247, 0.8);
+  outline: 2px solid rgba(247, 58, 237, 0.6);
+  outline-offset: 4px;
+  box-shadow: 0 0 25px rgba(247, 58, 237, 0.4), inset 0 0 15px rgba(168, 85, 247, 0.2);
+  transition: transform var(--transition), box-shadow var(--transition), outline-color var(--transition);
+}
+
+#foto img:hover {
+  transform: scale(1.03);
+  outline-color: #f73aed;
+  box-shadow: 0 0 35px rgba(247, 58, 237, 0.7);
 }
 
 @keyframes pulso {
