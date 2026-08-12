@@ -59,7 +59,6 @@ export default function Hero() {
             <h1 className="hero-full-name">
               Yessica <span className="gradient-text-name">Jaramillo</span>
             </h1>
-            <div className="neon-divider-line"></div>
           </div>
 
           {/* Subtítulo ADSO */}
