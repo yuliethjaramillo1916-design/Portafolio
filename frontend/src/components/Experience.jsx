@@ -43,30 +43,6 @@ const defaultExperiences = [
     linkUrl: KASSY_URL,
     linkText: '🚀 Explorar KASSY',
     isPrimary: true
-  },
-  {
-    id: 'total-red',
-    title: '🌐 Total-Red',
-    tagline: 'Monitoreo de Redes de Datos',
-    description: 'Sistema de gestión y monitoreo continuo de infraestructura de red con dashboard interactivo en tiempo real y sistema de alertas automáticas.',
-    technologies: ['JavaScript', 'Node.js', 'CSS', 'APIs'],
-    isPrimary: false
-  },
-  {
-    id: 'sicap',
-    title: '🔐 SICAP',
-    tagline: 'Control de Acceso Empresarial',
-    description: 'Plataforma empresarial para el control de acceso, registro de personal, generación de reportes detallados y panel administrativo seguro.',
-    technologies: ['React', 'Express', 'MySQL', 'JWT'],
-    isPrimary: false
-  },
-  {
-    id: 'pos',
-    title: '💳 Sistema POS',
-    tagline: 'Punto de Venta y Facturación',
-    description: 'Solución punto de venta para control de inventarios, facturación electrónica y análisis de ventas en tiempo real.',
-    technologies: ['React', 'Node.js', 'Base de Datos', 'CSS'],
-    isPrimary: false
   }
 ];
 
