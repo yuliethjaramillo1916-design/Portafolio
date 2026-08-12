@@ -40,7 +40,7 @@ export default function Hero() {
       </aside>
 
       <aside className="widgets-container" id="foto">
-        <img src="/imagen/yo.jpg" alt="Foto de perfil Yessica Jaramillo - Aprendiz SENA" />
+        <img src="/imagen/gafas.png" alt="Foto de perfil Yessica Jaramillo - Aprendiz SENA" />
       </aside>
     </section>
   );
