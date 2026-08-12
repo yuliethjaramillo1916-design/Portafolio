@@ -1,16 +1,15 @@
 import React from 'react';
 import { 
   Rocket, Eye, Code2, Monitor, Zap, Target, 
-  GraduationCap, Users, Sparkles, Database, 
-  Layers, Globe, Cpu, Terminal
+  GraduationCap, Users, Sparkles
 } from 'lucide-react';
 
 export default function Hero() {
   const technologies = [
-    { name: 'JavaScript', icon: 'JS', isBadge: true },
+    { name: 'JavaScript', icon: 'JS' },
     { name: 'React', icon: '⚛' },
     { name: 'Node.js', icon: '🟢' },
-    { name: 'Express', icon: 'EX', isBadge: true },
+    { name: 'Express', icon: 'EX' },
     { name: 'MongoDB', icon: '🍃' },
     { name: 'MySQL', icon: '🐬' },
     { name: 'APIs REST', icon: '☁' },
@@ -103,16 +102,18 @@ export default function Hero() {
         <div className="hero-right-card">
           <div className="profile-glass-card">
             
-            {/* Elementos decorativos de fondo flotantes */}
-            <div className="floating-shape shape-1"></div>
-            <div className="floating-shape shape-2"></div>
-            <div className="floating-dot dot-1"></div>
-            <div className="floating-dot dot-2"></div>
+            {/* Elementos decorativos de fondo flotantes idénticos a la referencia */}
+            <div className="floating-shape shape-left-diamond"></div>
+            <div className="floating-shape shape-right-diamond"></div>
+            <div className="floating-dot dot-top-left"></div>
+            <div className="floating-dot dot-top-right"></div>
+            <div className="floating-dot dot-mid-right"></div>
+            <div className="floating-dot dot-bottom-left"></div>
 
             {/* Contenedor central de la foto con Halo Ovalado Neon 360° */}
             <div className="profile-image-oval-wrapper">
-              <div className="neon-halo-ring"></div>
-              <div className="neon-halo-secondary"></div>
+              <div className="neon-halo-glow-bg"></div>
+              <div className="neon-halo-border-ring"></div>
               <img 
                 src="/imagen/gafas.png" 
                 alt="Foto de perfil Yessica Jaramillo - Aprendiz SENA ADSO" 
@@ -120,12 +121,10 @@ export default function Hero() {
               />
             </div>
 
-            {/* Panel Inferior de Habilidades (3 Columnas) */}
+            {/* Panel Inferior de Habilidades (3 Columnas sin círculos, directo como en la foto) */}
             <div className="skills-subpanel-grid">
               <div className="subpanel-col">
-                <div className="subpanel-icon-circle purple-glow">
-                  <Code2 size={20} />
-                </div>
+                <div className="subpanel-direct-icon code-color">&lt;/&gt;</div>
                 <h4 className="subpanel-title">Desarrollo</h4>
                 <p className="subpanel-desc">Web Full Stack</p>
               </div>
@@ -133,8 +132,8 @@ export default function Hero() {
               <div className="subpanel-divider"></div>
 
               <div className="subpanel-col">
-                <div className="subpanel-icon-circle violet-glow">
-                  <Monitor size={20} />
+                <div className="subpanel-direct-icon monitor-color">
+                  <Monitor size={22} />
                 </div>
                 <h4 className="subpanel-title">Interfaces</h4>
                 <p className="subpanel-desc">Intuitivas</p>
@@ -143,8 +142,8 @@ export default function Hero() {
               <div className="subpanel-divider"></div>
 
               <div className="subpanel-col">
-                <div className="subpanel-icon-circle fuchsia-glow">
-                  <Zap size={20} />
+                <div className="subpanel-direct-icon zap-color">
+                  <Zap size={22} />
                 </div>
                 <h4 className="subpanel-title">Soluciones</h4>
                 <p className="subpanel-desc">Efectivas</p>
