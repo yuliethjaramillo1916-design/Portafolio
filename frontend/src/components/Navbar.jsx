@@ -18,7 +18,7 @@ export default function Navbar() {
       <div className="logo-wrapper">
         <span className="code-icon">&lt;/&gt;</span>
         <span className="logo-name">
-          Yessica <span className="logo-gradient">Jaramillo</span>
+          Portafolio <span className="logo-gradient">Web</span>
         </span>
       </div>
 
