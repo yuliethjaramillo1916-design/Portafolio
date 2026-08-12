@@ -1,0 +1,10 @@
+{
+  "name": "portfolio-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portafolio dividido en Frontend (React + Vite) y Backend (Node.js + Express)",
+  "scripts": {
+    "frontend": "npm --prefix frontend run dev",
+    "backend": "npm --prefix backend run dev"
+  }
+}

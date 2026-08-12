@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <div class="wrap">
+    <header>
+      <div class="logo">
+        <div class="marca">Yessica Jaramillo</div>
+      </div>
+      
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#proyectos-destacados">Proyectos</a>
+        <a href="#programas">Programas JS</a>
+        <a href="#tu-proyecto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero">
+        <aside class="contenido" id="contenido">
+          <div class="texto">
+            <div class="status-badge">
+              <div class="status-dot"></div>
+              Disponible para nuevos proyectos
+            </div>
+            
+            <h1>
+              Yessica Jaramillo<br>
+              <span class="highlight">Aprendiz SENA</span><br>
+              Tecnólogo ADSO
+            </h1>
+            
+            <p>
+              Apasionada por el desarrollo de software y la creación de soluciones web modernas. Formándome en el tecnólogo en <strong>Análisis y Desarrollo de Software (ADSO)</strong> en el SENA, con competencias en desarrollo Frontend, Backend, diseño de interfaces y arquitectura de aplicaciones web robustas.
+            </p>
+
+            <div class="skills-chips">
+              <span class="skill-chip">JavaScript</span>
+              <span class="skill-chip">React</span>
+              <span class="skill-chip">Node.js</span>
+              <span class="skill-chip">Express</span>
+              <span class="skill-chip">MongoDB</span>
+              <span class="skill-chip">MySQL</span>
+              <span class="skill-chip">Git / GitHub</span>
+              <span class="skill-chip">APIs REST</span>
+            </div>
+
+            <div class="buttons-row" style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px;">
+              <a href="#tu-proyecto" class="btn primary">Trabajemos juntos</a>
+              <a href="#experiencia" class="btn">Ver mis proyectos</a>
+            </div>
+          </div>
+        </aside>
+        <aside class="widgets-container" id="foto">
+          <img src="imagen/gafas.png" alt="Foto de perfil Yessica Jaramillo">
+        </aside>
+      </section>
+
+      <section id="experiencia" class="experience">
+        <h2 class="section-title">Proyectos & Experiencia del Aprendiz</h2>
+        
+        <div class="projects-grid">
+          <!-- PROYECTO PRINCIPAL 1: SIGEP-Turnos -->
+          <article class="project-card featured-card fade-up" draggable="true">
+            <div class="project-card-header">
+              <h3>🏢 SIGEP-Turnos</h3>
+              <span class="project-tagline">Plataforma Web para Gestión y Control de Turnos</span>
+            </div>
+            <p class="project-desc">
+              SIGEP-Turnos es una plataforma web integral diseñada para la gestión, organización y control eficiente de turnos y atención al usuario. Permite administrar filas de espera en tiempo real, usuarios, trámites y ventanillas, visualizando el llamado en pantalla pública. Cuenta con arquitectura multi-entidad para aislar y proteger la información institucional.
+            </p>
+            <div class="how-it-works-box">
+              <div class="how-it-works-title">⚡ ¿Cómo funciona?</div>
+              <ul class="flow-steps">
+                <li class="flow-step">1. Generación del turno por parte del usuario.</li>
+                <li class="flow-step">2. Selección del trámite o servicio requerido.</li>
+                <li class="flow-step">3. Ingreso automático a la fila de espera.</li>
+                <li class="flow-step">4. El operador atiende desde su ventanilla asignada.</li>
+                <li class="flow-step">5. El sistema realiza el llamado del siguiente turno.</li>
+                <li class="flow-step">6. Visualización inmediata en la pantalla pública con alertas.</li>
+                <li class="flow-step">7. Registro y auditoría del proceso para métricas de gestión.</li>
+              </ul>
+            </div>
+            <div class="tech-badge-container">
+              <span class="tech-label">Tecnologías:</span>
+              <div class="tech-badges">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Vite</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">Express.js</span>
+                <span class="tech-badge">MongoDB</span>
+                <span class="tech-badge">Mongoose</span>
+                <span class="tech-badge">JWT</span>
+                <span class="tech-badge">Socket.io</span>
+                <span class="tech-badge">CSS</span>
+              </div>
+            </div>
+            <div class="project-action-wrapper">
+              <!-- Reemplaza el href con la URL en línea de SIGEP-Turnos -->
+              <a href="PEGAR_AQUI_URL_DE_SIGEP_TURNOS" target="_blank" rel="noopener noreferrer" class="btn primary btn-project-action">
+                🚀 Ver SIGEP-Turnos en línea
+              </a>
+            </div>
+          </article>
+
+          <!-- PROYECTO PRINCIPAL 2: KASSY -->
+          <article class="project-card featured-card fade-up" draggable="true">
+            <div class="project-card-header">
+              <h3>🎓 KASSY</h3>
+              <span class="project-tagline">Plataforma Web de Gestión de Procesos Académicos</span>
+            </div>
+            <p class="project-desc">
+              KASSY es una solución web orientada a optimizar y centralizar la administración de procesos académicos institucionales. Facilita la organización de estudiantes, docentes, asignaturas, calificaciones, asistencia y procesos institucionales bajo un entorno modular y seguro.
+            </p>
+            <div class="how-it-works-box">
+              <div class="how-it-works-title">⚡ ¿Cómo funciona?</div>
+              <ul class="flow-steps">
+                <li class="flow-step">1. Ingreso seguro a la plataforma según credenciales.</li>
+                <li class="flow-step">2. Vistas y permisos personalizados según el rol (Admin, Docente, Estudiante).</li>
+                <li class="flow-step">3. Los docentes gestionan asignaturas, notas y asistencias.</li>
+                <li class="flow-step">4. Los estudiantes consultan su avance académico y calificaciones.</li>
+                <li class="flow-step">5. Los administradores gestionan la información general institucional.</li>
+                <li class="flow-step">6. Centralización total de los procesos académicos en un solo sistema.</li>
+              </ul>
+            </div>
+            <div class="tech-badge-container">
+              <span class="tech-label">Tecnologías:</span>
+              <div class="tech-badges">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">Express.js</span>
+                <span class="tech-badge">MySQL / MongoDB</span>
+                <span class="tech-badge">CSS</span>
+                <span class="tech-badge">APIs REST</span>
+              </div>
+            </div>
+            <div class="project-action-wrapper">
+              <!-- Reemplaza el href con la URL en línea de KASSY -->
+              <a href="PEGAR_AQUI_URL_DE_KASSY" target="_blank" rel="noopener noreferrer" class="btn primary btn-project-action">
+                🚀 Explorar KASSY
+              </a>
+            </div>
+          </article>
+
+          <!-- OTROS PROYECTOS -->
+          <article class="project-card fade-up" draggable="true">
+            <div class="project-card-header">
+              <h3>🌐 Total-Red</h3>
+              <span class="project-tagline">Monitoreo de Redes de Datos</span>
+            </div>
+            <p class="project-desc">
+              Sistema completo de gestión y monitoreo de redes de datos con dashboard en tiempo real y alertas automáticas.
+            </p>
+            <div class="tech-badge-container">
+              <span class="tech-label">Tecnologías:</span>
+              <div class="tech-badges">
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">CSS</span>
+              </div>
+            </div>
+          </article>
+          
+          <article class="project-card fade-up" draggable="true">
+            <div class="project-card-header">
+              <h3>🔐 SICAP</h3>
+              <span class="project-tagline">Control de Acceso Empresarial</span>
+            </div>
+            <p class="project-desc">
+              Plataforma de control de acceso empresarial con gestión de usuarios, reportes y panel administrativo.
+            </p>
+            <div class="tech-badge-container">
+              <span class="tech-label">Tecnologías:</span>
+              <div class="tech-badges">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Express</span>
+                <span class="tech-badge">MySQL</span>
+              </div>
+            </div>
+          </article>
+          
+          <article class="project-card fade-up" draggable="true">
+            <div class="project-card-header">
+              <h3>💳 Sistema POS</h3>
+              <span class="project-tagline">Punto de Venta y Facturación</span>
+            </div>
+            <p class="project-desc">
+              Solución punto de venta con inventario, facturación electrónica y análisis de ventas en tiempo real.
+            </p>
+            <div class="tech-badge-container">
+              <span class="tech-label">Tecnologías:</span>
+              <div class="tech-badges">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">Base de Datos</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="hint-text" style="text-align: center; margin-top: 18px; color: purple; font-size: 0.9rem;">
+          💡 Arrastra las tarjetas para reordenarlas a tu gusto
+        </p>
+      </section>
+
+      <section id="slider" class="slider">
+        <div class="slider">
+            <h1 class="titulo">Mis Proyectos</h1>
+            <br>
+    <div class="img">
+      <section><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2SgUP564PlawSTNAUq9xyUc3b55f__1OarA&s"></section>
+      <section><img src="https://images.unsplash.com/photo-1729508419473-b2d296bffbb2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHx8"></section>
+      <section><img src="https://static.vecteezy.com/system/resources/thumbnails/009/273/280/small/concept-of-loneliness-and-disappointment-in-love-sad-man-sitting-element-of-the-picture-is-decorated-by-nasa-free-photo.jpg"></section>
+    </div>
+</div>
+  <div>
+    <button id="btnizquierda"><</button>
+    <button id="btnderecha"> > </button>
+  </div>
+      </section>
+<br>
+<br>
+
+<section id="proyectos-destacados" class="proyectos-destacados">
+        <h2 class="section-title">Proyectos Destacados</h2>
+<aside class="widgets-container">
+          <div class="widgets-grid">
+            <div class="widget fade-up">
+              <div class="widget-icon">🧮</div>
+              <h3>Calculadora</h3>
+              <p>Herramientas matemáticas</p>
+            </div>
+            
+            <div class="widget fade-up">
+              <div class="widget-icon">🔐</div>
+              <h3>Generador de Contraseñas</h3>
+              <p>Seguridad avanzada</p>
+            </div>
+            
+            <div class="widget fade-up">
+              <div class="widget-icon">⏱️</div>
+              <h3>Cronómetro</h3>
+              <p>Control de tiempo</p>
+            </div>
+          </div>
+        </aside>
+    </section>
+<br>
+<br>
+      <section id="tu-proyecto" class="tu-proyecto">
+        <aside class="widgets-container">
+        <div class="contact-form">
+            <h3>Hablemos de tu proyecto</h3>
+            <form id="contactForm">
+              <div class="form-grid">
+                <input type="text" placeholder="Tu nombre" required>
+                <input type="email" placeholder="Tu email" required>
+              </div>
+              <button type="submit" class="submit-btn">Enviar mensaje</button>
+            </form>
+            </div>
+            </aside>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div>
+          <div class="marca">Yessica Jaramillo</div>
+            Aprendiz del Sena y sus avances
+          </div>
+        </div>
+        <div>
+          Instructor lider Oscar Castro
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="java.js"></script>
+</body>
+</html>
