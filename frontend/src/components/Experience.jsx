@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 // =========================================================================
 // CONFIGURACIÓN DE ENLACES A PROYECTOS EN LÍNEA
-// Puedes reemplazar las URLs a continuación con los enlaces reales de tus proyectos:
 // =========================================================================
-const SIGEP_TURNOS_URL = "PEGAR_AQUI_URL_DE_SIGEP_TURNOS";
+const SIGEP_TURNOS_URL = "https://yessica.online/turnos";
 const KASSY_URL = "PEGAR_AQUI_URL_DE_KASSY";
 
 const defaultExperiences = [
