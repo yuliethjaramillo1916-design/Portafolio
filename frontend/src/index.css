@@ -51,21 +51,37 @@ html, body {
   width: 100%;
   max-width: 100%;
   margin: 0;
-  padding: 0 20px 60px 20px;
+  padding: 0 0 60px 0;
+}
+
+/* Secciones con alineación responsiva lateral */
+.hero-section,
+.values-banner-card,
+.projects-grid,
+.slider-section,
+.widgets-container,
+.contact-section,
+.section-title,
+footer {
+  padding-left: 4%;
+  padding-right: 4%;
+  box-sizing: border-box;
 }
 
 /* ==========================================================================
-   1. NAVBAR MODERNO
+   1. NAVBAR MODERNO (ANCHO COMPLETO EXTREMO A EXTREMO)
    ========================================================================== */
 .navbar-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 0;
+  padding: 18px 4%;
+  width: 100%;
+  box-sizing: border-box;
   border-bottom: 1px solid rgba(139, 92, 246, 0.15);
   position: sticky;
   top: 0;
-  background: rgba(5, 8, 22, 0.85);
+  background: rgba(5, 8, 22, 0.9);
   backdrop-filter: blur(16px);
   z-index: 1000;
 }
