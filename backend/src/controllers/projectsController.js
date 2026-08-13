@@ -16,7 +16,7 @@ export const getExperience = (req, res) => {
         '7. Registro y auditoría del proceso para métricas y control de gestión.'
       ],
       technologies: ['React', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT', 'Socket.io', 'CSS'],
-      linkUrl: 'PEGAR_AQUI_URL_DE_SIGEP_TURNOS',
+      linkUrl: 'https://yessica.online/turnos',
       linkText: '🚀 Ver SIGEP-Turnos en línea',
       isPrimary: true
     },
@@ -34,7 +34,7 @@ export const getExperience = (req, res) => {
         '6. Centralización total de los procesos académicos en un único sistema confiable.'
       ],
       technologies: ['React', 'JavaScript', 'Node.js', 'Express.js', 'MySQL / MongoDB', 'CSS', 'APIs REST'],
-      linkUrl: 'PEGAR_AQUI_URL_DE_KASSY',
+      linkUrl: 'https://klassy.teamfusion.site',
       linkText: '🚀 Explorar KASSY',
       isPrimary: true
     }
