@@ -68,6 +68,23 @@ footer {
   box-sizing: border-box;
 }
 
+/* Iconos Vectoriales SVG */
+.svg-vector-icon {
+  display: inline-block;
+  vertical-align: middle;
+  stroke: var(--purple-main);
+  filter: drop-shadow(0 0 6px rgba(139, 92, 246, 0.5));
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.btn-cta .svg-vector-icon,
+.btn-project-action .svg-vector-icon {
+  stroke: currentColor;
+  filter: none;
+}
+
 /* ==========================================================================
    1. NAVBAR MODERNO (ANCHO COMPLETO EXTREMO A EXTREMO)
    ========================================================================== */

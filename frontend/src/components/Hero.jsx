@@ -7,13 +7,13 @@ import {
 export default function Hero() {
   const technologies = [
     { name: 'JavaScript', icon: 'JS' },
-    { name: 'React', icon: '⚛' },
-    { name: 'Node.js', icon: '🟢' },
+    { name: 'React', icon: 'RT' },
+    { name: 'Node.js', icon: 'ND' },
     { name: 'Express', icon: 'EX' },
-    { name: 'MongoDB', icon: '🍃' },
-    { name: 'MySQL', icon: '🐬' },
-    { name: 'APIs REST', icon: '☁' },
-    { name: 'Git / GitHub', icon: '🐙' },
+    { name: 'MongoDB', icon: 'MD' },
+    { name: 'MySQL', icon: 'MY' },
+    { name: 'APIs REST', icon: 'WS' },
+    { name: 'Git / GitHub', icon: 'GT' },
   ];
 
   const values = [
@@ -123,7 +123,9 @@ export default function Hero() {
             {/* Panel Inferior de Habilidades (Separado limpiamente, compacto y estilizado) */}
             <div className="skills-subpanel-grid">
               <div className="subpanel-col">
-                <div className="subpanel-direct-icon code-color">&lt;/&gt;</div>
+                <div className="subpanel-direct-icon code-color">
+                  <Code2 size={19} />
+                </div>
                 <h4 className="subpanel-title">Desarrollo</h4>
                 <p className="subpanel-desc">Web Full Stack</p>
               </div>
