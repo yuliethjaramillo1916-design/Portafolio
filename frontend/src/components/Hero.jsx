@@ -78,7 +78,6 @@ export default function Hero() {
           <div className="tech-chips-wrapper">
             {technologies.map((tech, index) => (
               <div key={index} className="tech-chip-item">
-                <span className="tech-chip-icon">{tech.icon}</span>
                 <span className="tech-chip-name">{tech.name}</span>
               </div>
             ))}
