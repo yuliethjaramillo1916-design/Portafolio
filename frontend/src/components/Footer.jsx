@@ -9,7 +9,7 @@ export default function Footer() {
           <p>Aprendiz del Sena y sus avances</p>
         </div>
         <div>
-          <p>Instructor líder Oscar Castro</p>
+          <p>Instructor líder Yanguas</p>
         </div>
       </div>
     </footer>
