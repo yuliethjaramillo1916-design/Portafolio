@@ -9,7 +9,7 @@ const KASSY_URL = "PEGAR_AQUI_URL_DE_KASSY";
 const defaultExperiences = [
   {
     id: 'sigep-turnos',
-    title: '🏢 SIGEP-Turnos',
+    title: 'SIGEP-Turnos',
     tagline: 'Plataforma Web para Gestión y Control de Turnos',
     description: 'SIGEP-Turnos es una plataforma web integral diseñada para la gestión, organización y control eficiente de turnos y atención al usuario. Permite administrar filas de espera en tiempo real, usuarios, trámites y ventanillas de atención, visualizando el llamado de turnos en una pantalla pública interactiva. Cuenta con una arquitectura multi-entidad para separar y proteger los datos de cada organización.',
     howItWorks: [
@@ -23,12 +23,12 @@ const defaultExperiences = [
     ],
     technologies: ['React', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT', 'Socket.io', 'CSS'],
     linkUrl: SIGEP_TURNOS_URL,
-    linkText: '🚀 Ver SIGEP-Turnos en línea',
+    linkText: 'Ver SIGEP-Turnos en línea',
     isPrimary: true
   },
   {
     id: 'kassy',
-    title: '🎓 KASSY',
+    title: 'KASSY',
     tagline: 'Plataforma Web de Gestión de Procesos Académicos',
     description: 'KASSY es una solución web orientada a optimizar y centralizar la administración de procesos académicos institucionales. Facilita la organización integral de estudiantes, docentes, asignaturas, calificaciones, registro de asistencia y control administrativo mediante un sistema modular y seguro.',
     howItWorks: [
@@ -41,7 +41,7 @@ const defaultExperiences = [
     ],
     technologies: ['React', 'JavaScript', 'Node.js', 'Express.js', 'MySQL / MongoDB', 'CSS', 'APIs REST'],
     linkUrl: KASSY_URL,
-    linkText: '🚀 Explorar KASSY',
+    linkText: 'Explorar KASSY',
     isPrimary: true
   }
 ];
@@ -101,7 +101,14 @@ export default function Experience() {
               onDrop={() => handleDrop(index)}
             >
               <div className="project-card-header">
-                <h3>{exp.title}</h3>
+                <h3>
+                  {exp.id === 'sigep-turnos' ? (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-vector-icon" style={{marginRight: '6px'}}><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="16"/><line x1="15" y1="22" x2="15" y2="16"/><line x1="9" y1="16" x2="15" y2="16"/><path d="M8 6h2v2H8V6zm4 0h2v2h-2V6zm4 0h2v2h-2V6zM8 11h2v2H8v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z"/></svg>
+                  ) : (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-vector-icon" style={{marginRight: '6px'}}><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+                  )}
+                  {exp.title.replace('🏢 ', '').replace('🎓 ', '')}
+                </h3>
                 {exp.tagline && <span className="project-tagline">{exp.tagline}</span>}
               </div>
 
@@ -110,7 +117,10 @@ export default function Experience() {
               {/* Sección visual Cómo Funciona si está presente */}
               {exp.howItWorks && (
                 <div className="how-it-works-box">
-                  <div className="how-it-works-title">⚡ ¿Cómo funciona?</div>
+                  <div className="how-it-works-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-vector-icon" style={{marginRight: '4px'}}><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    ¿Cómo funciona?
+                  </div>
                   <ul className="flow-steps">
                     {exp.howItWorks.map((step, idx) => (
                       <li key={idx} className="flow-step">{step}</li>
@@ -138,7 +148,7 @@ export default function Experience() {
                     href={hrefValue}
                     target={isUrlConfigured ? "_blank" : "_self"}
                     rel="noopener noreferrer"
-                    className="btn primary btn-project-action"
+                    className="btn-project-action"
                     onClick={(e) => {
                       if (!isUrlConfigured) {
                         e.preventDefault();
@@ -146,7 +156,8 @@ export default function Experience() {
                       }
                     }}
                   >
-                    {exp.linkText}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-vector-icon" style={{marginRight: '6px', stroke: 'currentColor'}}><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    {exp.linkText.replace('🚀 ', '')}
                   </a>
                 </div>
               )}
