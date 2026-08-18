@@ -940,35 +940,36 @@ footer {
 }
 
 .contact-card {
-  max-width: 650px;
+  max-width: 680px;
   margin: 0 auto;
-  background: rgba(8, 13, 30, 0.45);
-  border: 1px solid rgba(139, 92, 246, 0.25);
-  border-radius: 24px;
-  padding: 40px;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(139, 92, 246, 0.15);
-  transition: all var(--transition);
+  background: linear-gradient(135deg, rgba(14, 10, 36, 0.7) 0%, rgba(8, 5, 22, 0.8) 100%) !important;
+  border: 1.5px solid rgba(139, 92, 246, 0.25);
+  border-radius: 28px;
+  padding: 45px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 50px rgba(139, 92, 246, 0.15);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .contact-card:hover {
   border-color: rgba(139, 92, 246, 0.45);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(139, 92, 246, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.7), 0 0 60px rgba(139, 92, 246, 0.25);
 }
 
 .contact-card h3 {
   text-align: center;
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 24px;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 30px;
   color: #ffffff;
-  background: linear-gradient(135deg, #c084fc, #f472b6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
-  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #c084fc, #f472b6) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-shadow: 0 0 25px rgba(139, 92, 246, 0.3);
+  letter-spacing: -0.5px;
 }
 
 .form-grid {
@@ -978,26 +979,35 @@ footer {
   margin-bottom: 20px;
 }
 
-.form-input, .form-textarea-wrapper textarea {
+.form-grid input, .form-textarea-wrapper textarea {
   width: 100%;
-  background: rgba(5, 8, 22, 0.65);
-  border: 1px solid rgba(139, 92, 246, 0.25);
+  background: rgba(8, 12, 30, 0.6) !important;
+  border: 1px solid rgba(139, 92, 246, 0.25) !important;
   border-radius: 12px;
-  padding: 14px 18px;
-  color: #ffffff;
-  font-size: 0.95rem;
+  padding: 15px 20px;
+  color: #ffffff !important;
+  font-size: 0.98rem;
   outline: none;
   transition: all var(--transition);
 }
 
-.form-input:focus, .form-textarea-wrapper textarea:focus {
-  border-color: var(--purple-main);
-  background: rgba(5, 8, 22, 0.85);
+.form-grid input:focus, .form-textarea-wrapper textarea:focus {
+  border-color: var(--purple-main) !important;
+  background: rgba(5, 8, 22, 0.85) !important;
   box-shadow: 0 0 16px rgba(139, 92, 246, 0.4);
 }
 
-.form-input::placeholder, .form-textarea-wrapper textarea::placeholder {
-  color: rgba(255, 255, 255, 0.45);
+.form-grid input::placeholder, .form-textarea-wrapper textarea::placeholder {
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+
+/* Evitar fondo blanco del autocompletado en navegadores */
+.form-grid input:-webkit-autofill,
+.form-grid input:-webkit-autofill:hover, 
+.form-grid input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(8, 12, 30, 0.9) inset !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .form-textarea-wrapper {
