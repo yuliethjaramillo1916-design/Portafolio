@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Code, Download, Menu, X } from 'lucide-react';
+import { Code, Download, Menu, X, Rabbit } from 'lucide-react';
 
 export default function Navbar() {
   const [activeNav, setActiveNav] = useState('inicio');
@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <header className="navbar-container">
       <div className="logo-wrapper">
-        <span className="code-icon">&lt;/&gt;</span>
+        <Rabbit className="code-icon" style={{ color: '#a855f7', marginRight: '8px' }} size={32} />
         <span className="logo-name">
           Portafolio <span className="logo-gradient">Web</span>
         </span>
