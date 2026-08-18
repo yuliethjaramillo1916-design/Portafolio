@@ -1,8 +1,46 @@
 // Función tradicional para manejar el formulario
     function handleFormSubmit(event) {
       event.preventDefault();
-      alert('Gracias por tu mensaje. Te contactaré pronto.');
-      event.target.reset();
+      
+      const form = event.target;
+      const nameInput = form.querySelector('input[placeholder="Tu nombre"]');
+      const emailInput = form.querySelector('input[placeholder="Tu email"]');
+      const submitBtn = form.querySelector('.submit-btn');
+      
+      const name = nameInput.value;
+      const email = emailInput.value;
+      
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Enviando...';
+      submitBtn.disabled = true;
+      
+      fetch('https://formsubmit.co/ajax/herranyuyeimi@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          message: `Mensaje de contacto enviado desde el Portafolio Web (HTML Estático) por: ${name} (${email})`
+        })
+      })
+      .then(function(response) {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+        if (response.ok) {
+          alert('¡Gracias por tu mensaje! Se ha enviado correctamente. (Si es la primera vez que lo utilizas, revisa tu correo para activar el formulario).');
+          form.reset();
+        } else {
+          alert('Error al enviar el mensaje. Intenta de nuevo.');
+        }
+      })
+      .catch(function(error) {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+        alert('Ocurrió un error al enviar el mensaje. Intenta de nuevo.');
+      });
     }
 
     // Función tradicional para animaciones de scroll

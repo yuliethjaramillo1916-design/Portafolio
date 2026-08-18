@@ -9,13 +9,12 @@ export default function Navbar() {
     { id: 'inicio', label: 'Inicio', href: '#inicio' },
     { id: 'experiencia', label: 'Experiencia', href: '#experiencia' },
     { id: 'slider', label: 'Proyectos', href: '#slider' },
-    { id: 'proyectos-destacados', label: 'Destacados', href: '#proyectos-destacados' },
     { id: 'tu-proyecto', label: 'Contacto', href: '#tu-proyecto' }
   ];
 
   return (
     <header className="navbar-container">
-      <div className="logo-wrapper">
+      <div class="logo-wrapper">
         <Rabbit className="code-icon" style={{ color: '#a855f7', marginRight: '8px' }} size={32} />
         <span className="logo-name">
           Portafolio <span className="logo-gradient">Web</span>
@@ -40,7 +39,7 @@ export default function Navbar() {
       </nav>
 
       <div className="nav-right">
-        <a href="#contacto" className="btn-cv" onClick={(e) => { e.preventDefault(); alert("Descargando currículum vitae de Yessica Jaramillo..."); }}>
+        <a href="/imagen/Hoja de vida.pdf" target="_blank" className="btn-cv">
           <Download size={16} />
           <span>Descargar CV</span>
         </a>

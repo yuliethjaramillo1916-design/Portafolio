@@ -13,12 +13,17 @@ export default function ContactForm() {
     setStatus({ loading: true, message: 'Enviando mensaje...', type: '' });
 
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const response = await fetch('https://formsubmit.co/ajax/herranyuyeimi@gmail.com', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: `Mensaje de contacto enviado desde el Portafolio Web por: ${formData.name} (${formData.email})`
+        })
       });
 
       const data = await response.json();
@@ -26,25 +31,23 @@ export default function ContactForm() {
       if (response.ok) {
         setStatus({
           loading: false,
-          message: data.message || '¡Gracias por tu mensaje! Te contactaré pronto.',
+          message: '¡Gracias por tu mensaje! Se ha enviado correctamente. (Si es la primera vez que lo utilizas, revisa tu correo para activar el formulario).',
           type: 'success'
         });
         setFormData({ name: '', email: '' });
       } else {
         setStatus({
           loading: false,
-          message: data.message || 'Error al enviar el mensaje.',
+          message: data.message || 'Error al enviar el mensaje. Intenta de nuevo.',
           type: 'error'
         });
       }
     } catch (err) {
-      // Fallback si el backend no está corriendo
       setStatus({
         loading: false,
-        message: '¡Gracias por tu mensaje! (Modo local sin backend activo)',
-        type: 'success'
+        message: 'Ocurrió un error al enviar el mensaje. Intenta de nuevo.',
+        type: 'error'
       });
-      setFormData({ name: '', email: '' });
     }
   };
 
