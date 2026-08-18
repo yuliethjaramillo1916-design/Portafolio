@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({ name: '', email: '' });
+  const [formData, setFormData] = useState({ name: '', lastname: '', email: '', phone: '', feedback: '' });
   const [status, setStatus] = useState({ loading: false, message: '', type: '' });
 
   const handleChange = (e) => {
@@ -13,16 +13,19 @@ export default function ContactForm() {
     setStatus({ loading: true, message: 'Enviando mensaje...', type: '' });
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/herranyuyeimi@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ajax/fbe3e3cacd2e490c77d4a0ff4c8505dc', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          message: `Mensaje de contacto enviado desde el Portafolio Web por: ${formData.name} (${formData.email})`
+          Nombre: formData.name,
+          Apellido: formData.lastname,
+          Email: formData.email,
+          Telefono: formData.phone,
+          Opinion: formData.feedback,
+          _subject: `Contacto Portafolio: ${formData.name} ${formData.lastname}`
         })
       });
 
@@ -31,10 +34,10 @@ export default function ContactForm() {
       if (response.ok) {
         setStatus({
           loading: false,
-          message: '¡Gracias por tu mensaje! Se ha enviado correctamente. (Si es la primera vez que lo utilizas, revisa tu correo para activar el formulario).',
+          message: '¡Gracias por tu mensaje! Se ha enviado correctamente a Yessica Jaramillo.',
           type: 'success'
         });
-        setFormData({ name: '', email: '' });
+        setFormData({ name: '', lastname: '', email: '', phone: '', feedback: '' });
       } else {
         setStatus({
           loading: false,
@@ -62,11 +65,21 @@ export default function ContactForm() {
               <input
                 type="text"
                 name="name"
-                placeholder="Tu nombre"
+                placeholder="Nombre"
                 value={formData.name}
                 onChange={handleChange}
                 required
               />
+              <input
+                type="text"
+                name="lastname"
+                placeholder="Apellido"
+                value={formData.lastname}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-grid">
               <input
                 type="email"
                 name="email"
@@ -75,6 +88,25 @@ export default function ContactForm() {
                 onChange={handleChange}
                 required
               />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Teléfono"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-textarea-wrapper">
+              <textarea
+                name="feedback"
+                className="form-input form-textarea"
+                placeholder="¿Qué te pareció mi portafolio? Déjame tu opinión..."
+                value={formData.feedback}
+                onChange={handleChange}
+                required
+                rows="4"
+              ></textarea>
             </div>
 
             <button type="submit" className="submit-btn" disabled={status.loading}>

@@ -3,34 +3,37 @@
       event.preventDefault();
       
       const form = event.target;
-      const nameInput = form.querySelector('input[placeholder="Tu nombre"]');
-      const emailInput = form.querySelector('input[placeholder="Tu email"]');
+      const name = form.querySelector('#form-name').value;
+      const lastname = form.querySelector('#form-lastname').value;
+      const email = form.querySelector('#form-email').value;
+      const phone = form.querySelector('#form-phone').value;
+      const feedback = form.querySelector('#form-feedback').value;
       const submitBtn = form.querySelector('.submit-btn');
-      
-      const name = nameInput.value;
-      const email = emailInput.value;
       
       const originalText = submitBtn.textContent;
       submitBtn.textContent = 'Enviando...';
       submitBtn.disabled = true;
       
-      fetch('https://formsubmit.co/ajax/herranyuyeimi@gmail.com', {
+      fetch('https://formsubmit.co/ajax/fbe3e3cacd2e490c77d4a0ff4c8505dc', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          name: name,
-          email: email,
-          message: `Mensaje de contacto enviado desde el Portafolio Web (HTML Estático) por: ${name} (${email})`
+          Nombre: name,
+          Apellido: lastname,
+          Email: email,
+          Telefono: phone,
+          Opinion: feedback,
+          _subject: `Contacto Portafolio (HTML): ${name} ${lastname}`
         })
       })
       .then(function(response) {
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
         if (response.ok) {
-          alert('¡Gracias por tu mensaje! Se ha enviado correctamente. (Si es la primera vez que lo utilizas, revisa tu correo para activar el formulario).');
+          alert('¡Gracias por tu mensaje! Se ha enviado correctamente a Yessica Jaramillo.');
           form.reset();
         } else {
           alert('Error al enviar el mensaje. Intenta de nuevo.');
