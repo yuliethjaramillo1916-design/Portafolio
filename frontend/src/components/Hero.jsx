@@ -193,7 +193,7 @@ export default function Hero() {
                     <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
                     <text>
                       <textPath href="#circlePath" startOffset="0%">
-                        DESARROLLADORA FULL STACK • APASIONADA POR EL CÓDIGO •
+                        CREATIVIDAD AL DESARROLLAR • CREATIVIDAD AL DESARROLLAR •
                       </textPath>
                     </text>
                   </svg>
