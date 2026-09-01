@@ -296,7 +296,7 @@ export default function Hero() {
             </div>
             <h4 className="what-i-do-card-title">OPTIMIZACIÓN</h4>
             <p className="what-i-do-card-desc">
-              Optimización de rendimiento, SEO y mejores prácticas para aplicaciones rápidas y eficientes.
+              Optimización de rendimiento y mejores prácticas para aplicaciones rápidas y eficientes.
             </p>
           </div>
         </div>
