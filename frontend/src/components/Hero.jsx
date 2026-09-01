@@ -116,22 +116,22 @@ export default function Hero() {
           {/* Fila de Estadísticas */}
           <div className="hero-stats-row">
             <div className="stat-item">
-              <span className="stat-number">4+</span>
+              <span className="stat-number">0</span>
               <span className="stat-label">AÑOS DE EXPERIENCIA</span>
             </div>
             <div className="stat-divider"></div>
             <div className="stat-item">
-              <span className="stat-number">40+</span>
+              <span className="stat-number">3</span>
               <span className="stat-label">PROYECTOS COMPLETADOS</span>
             </div>
             <div className="stat-divider"></div>
             <div className="stat-item">
-              <span className="stat-number">25+</span>
-              <span className="stat-label">CLIENTES FELICES</span>
+              <span className="stat-number">3</span>
+              <span className="stat-label">CLIENTES</span>
             </div>
             <div className="stat-divider"></div>
             <div className="stat-item">
-              <span className="stat-number">10+</span>
+              <span className="stat-number">8</span>
               <span className="stat-label">TECNOLOGÍAS</span>
             </div>
           </div>
