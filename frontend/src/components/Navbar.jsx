@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <header className="navbar-container">
-      <div class="logo-wrapper">
+      <div className="logo-wrapper">
         <Rabbit className="code-icon" style={{ color: '#a855f7', marginRight: '8px' }} size={32} />
         <span className="logo-name">
           Portafolio <span className="logo-gradient">Web</span>
