@@ -9,7 +9,7 @@ const SIGEP_TURNOS_GITHUB = "https://github.com/yuliethjaramillo1916-design/SIGE
 const KASSY_URL = "https://klassy.teamfusion.site";
 const KASSY_GITHUB = "https://github.com/sahiramvs162007-oss/Klassy-3.0.git";
 
-const SGDP_URL = "#"; // El usuario proporcionará este enlace en línea
+const SGDP_URL = "https://sgdp.yessica.online";
 const SGDP_GITHUB = "https://github.com/yuliethjaramillo1916-design/SGDP.git";
 
 const defaultExperiences = [
