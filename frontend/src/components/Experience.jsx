@@ -56,12 +56,13 @@ const defaultExperiences = [
     id: 'sgdp',
     title: 'SGDP',
     tagline: 'Sistema de Gestión y Desarrollo de Procesos',
-    description: 'SGDP es una plataforma web desarrollada para la administración, control y seguimiento eficiente de procesos y registros. Cuenta con autenticación segura, gestión modular de información y diseño responsive optimizado para flujos de trabajo institucionales.',
+    description: 'Sistema web diseñado para gestionar, consultar y analizar la información académica de los aprendices, sus competencias, resultados de aprendizaje y juicios evaluativos. Permite realizar seguimiento al avance de cada aprendiz y generar indicadores para apoyar el control académico.',
     howItWorks: [
-      '1. Acceso autenticado según el rol asignado de usuario.',
-      '2. Registro y gestión de información en tiempo real.',
-      '3. Visualización y organización de módulos del sistema.',
-      '4. Generación de métricas, reportes y control de actividades.'
+      '1. Carga y organización de aprendices y juicios evaluativos.',
+      '2. Consulta de competencias y resultados de aprendizaje.',
+      '3. Seguimiento del estado y avance académico de los aprendices.',
+      '4. Visualización de indicadores, reportes y estadísticas.',
+      '5. Filtrado avanzado de la información académica.'
     ],
     technologies: ['React', 'Node.js', 'Express.js', 'MySQL / MongoDB', 'CSS', 'APIs REST', 'Git / GitHub'],
     linkUrl: SGDP_URL,
