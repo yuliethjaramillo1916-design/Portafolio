@@ -154,3 +154,109 @@
     if (slider && slides.length > 0) {
       iniciarAuto();
     }
+
+    // =========================================================================
+    // Lógica para el Modal de Previsualización y Descarga de PDF
+    // =========================================================================
+    const pdfOverlay = document.getElementById("pdf-modal-overlay");
+    const modalTitle = document.getElementById("modal-doc-title");
+    const modalSubtitle = document.getElementById("modal-doc-subtitle");
+    const modalFilename = document.getElementById("modal-doc-filename");
+    const modalIframe = document.getElementById("modal-pdf-iframe");
+    const modalFallbackLink = document.getElementById("modal-pdf-fallback-link");
+    const modalBtnDownloadTop = document.getElementById("modal-btn-download-top");
+    const modalBtnDownloadBottom = document.getElementById("modal-btn-download-bottom");
+    const modalBtnOpenTab = document.getElementById("modal-btn-open-tab");
+    const modalDownloadText = document.getElementById("modal-bottom-download-text");
+    const modalBtnCloseTop = document.getElementById("modal-btn-close-top");
+    const modalBtnCloseBottom = document.getElementById("modal-btn-close-bottom");
+
+    function abrirModalPdf(tipo) {
+      if (!pdfOverlay) return;
+
+      let config = {};
+      if (tipo === "cv") {
+        config = {
+          title: "Currículum Vitae",
+          subtitle: "CV Profesional • Yessica Jaramillo",
+          url: "/imagen/CV.pdf",
+          filename: "CV_Yessica_Jaramillo.pdf"
+        };
+      } else {
+        config = {
+          title: "Hoja de Vida",
+          subtitle: "Hoja de Vida Completa • Yessica Jaramillo",
+          url: "/imagen/Hoja de vida.pdf",
+          filename: "Hoja_de_vida_Yessica_Jaramillo.pdf"
+        };
+      }
+
+      modalTitle.textContent = config.title;
+      modalSubtitle.textContent = config.subtitle;
+      modalFilename.textContent = config.filename;
+      modalIframe.src = `${config.url}#toolbar=1&navpanes=0&view=FitH`;
+      modalFallbackLink.href = config.url;
+
+      // Configurar enlaces de descarga
+      modalBtnDownloadTop.href = config.url;
+      modalBtnDownloadTop.setAttribute("download", config.filename);
+
+      modalBtnDownloadBottom.href = config.url;
+      modalBtnDownloadBottom.setAttribute("download", config.filename);
+      if (modalDownloadText) {
+        modalDownloadText.textContent = `Descargar ${config.title}`;
+      }
+
+      // Enlace para abrir en pestaña nueva
+      if (modalBtnOpenTab) {
+        modalBtnOpenTab.href = config.url;
+      }
+
+      // Mostrar modal y bloquear scroll del fondo
+      pdfOverlay.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    }
+
+    function cerrarModalPdf() {
+      if (!pdfOverlay) return;
+      pdfOverlay.style.display = "none";
+      if (modalIframe) modalIframe.src = "";
+      document.body.style.overflow = "";
+    }
+
+    const btnOpenCv = document.getElementById("btn-open-cv");
+    if (btnOpenCv) {
+      btnOpenCv.addEventListener("click", function() {
+        abrirModalPdf("cv");
+      });
+    }
+
+    const btnOpenHdv = document.getElementById("btn-open-hdv");
+    if (btnOpenHdv) {
+      btnOpenHdv.addEventListener("click", function() {
+        abrirModalPdf("hdv");
+      });
+    }
+
+    if (modalBtnCloseTop) {
+      modalBtnCloseTop.addEventListener("click", cerrarModalPdf);
+    }
+    if (modalBtnCloseBottom) {
+      modalBtnCloseBottom.addEventListener("click", cerrarModalPdf);
+    }
+
+    // Cerrar al hacer clic en el fondo oscuro exterior
+    if (pdfOverlay) {
+      pdfOverlay.addEventListener("click", function(e) {
+        if (e.target === pdfOverlay) {
+          cerrarModalPdf();
+        }
+      });
+    }
+
+    // Cerrar con la tecla Escape
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "Escape" && pdfOverlay && pdfOverlay.style.display !== "none") {
+        cerrarModalPdf();
+      }
+    });

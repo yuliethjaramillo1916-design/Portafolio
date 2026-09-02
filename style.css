@@ -171,29 +171,48 @@ footer {
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
 .btn-cv {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 9px 18px;
+  padding: 8px 16px;
   border-radius: 20px;
-  background: rgba(14, 21, 45, 0.8);
-  border: 1px solid rgba(139, 92, 246, 0.4);
+  background: rgba(14, 21, 45, 0.85);
+  border: 1px solid rgba(139, 92, 246, 0.45);
   color: #ffffff;
-  font-size: 0.88rem;
+  font-family: inherit;
+  font-size: 0.86rem;
   font-weight: 600;
   text-decoration: none;
+  cursor: pointer;
+  outline: none;
   transition: all var(--transition);
+  white-space: nowrap;
 }
 
 .btn-cv:hover {
   background: var(--purple-bg);
   border-color: var(--purple-main);
   transform: translateY(-2px);
-  box-shadow: 0 0 16px rgba(139, 92, 246, 0.4);
+  box-shadow: 0 0 16px rgba(139, 92, 246, 0.45);
+}
+
+.btn-cv-hdv {
+  background: rgba(22, 16, 48, 0.85);
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+.btn-cv-hdv:hover {
+  background: rgba(168, 85, 247, 0.22);
+  border-color: #c084fc;
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.45);
+}
+
+.mobile-cv-group {
+  display: none;
 }
 
 .mobile-toggle-btn {
@@ -202,6 +221,276 @@ footer {
   border: none;
   color: #ffffff;
   cursor: pointer;
+}
+
+/* ==========================================================================
+   VISOR MODAL DE PDF (CV Y HOJA DE VIDA)
+   ========================================================================== */
+.pdf-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(3, 6, 20, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeInModal 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pdf-modal-container {
+  width: 100%;
+  max-width: 1000px;
+  height: 88vh;
+  max-height: 920px;
+  background: #070b1a;
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  border-radius: 22px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 35px rgba(139, 92, 246, 0.22);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: scaleUpModal 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pdf-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: rgba(14, 21, 45, 0.85);
+  border-bottom: 1px solid rgba(139, 92, 246, 0.22);
+  backdrop-filter: blur(10px);
+  gap: 16px;
+}
+
+.pdf-modal-title-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.pdf-modal-icon-badge {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(139, 92, 246, 0.18);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--purple-main);
+  flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.3);
+}
+
+.pdf-modal-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.pdf-modal-subtitle {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  font-weight: 500;
+  display: block;
+  margin-top: 3px;
+}
+
+.pdf-modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.pdf-btn-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  transition: all var(--transition);
+  outline: none;
+}
+
+.pdf-btn-download {
+  background: rgba(139, 92, 246, 0.2);
+  color: #e9d5ff;
+}
+
+.pdf-btn-download:hover {
+  background: var(--purple-main);
+  color: #ffffff;
+  border-color: var(--purple-main);
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(139, 92, 246, 0.5);
+}
+
+.pdf-btn-icon-only {
+  background: rgba(14, 21, 45, 0.8);
+  color: #cbd5e1;
+  padding: 8px 10px;
+}
+
+.pdf-btn-icon-only:hover {
+  background: rgba(139, 92, 246, 0.25);
+  color: #ffffff;
+  border-color: var(--purple-main);
+  transform: translateY(-2px);
+}
+
+.pdf-btn-close {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.35);
+  color: #fca5a5;
+  padding: 7px 9px;
+}
+
+.pdf-btn-close:hover {
+  background: rgba(239, 68, 68, 0.35);
+  color: #ffffff;
+  border-color: #ef4444;
+  box-shadow: 0 0 14px rgba(239, 68, 68, 0.4);
+  transform: translateY(-2px);
+}
+
+.pdf-modal-body {
+  flex: 1;
+  position: relative;
+  background: #040612;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.pdf-modal-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  flex: 1;
+  background: #0a0d1e;
+}
+
+.pdf-modal-fallback-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px;
+  background: rgba(8, 13, 30, 0.95);
+  border-top: 1px solid rgba(139, 92, 246, 0.15);
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.pdf-fallback-link {
+  color: var(--purple-main);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition);
+}
+
+.pdf-fallback-link:hover {
+  color: #e9d5ff;
+}
+
+.pdf-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  border-top: 1px solid rgba(139, 92, 246, 0.2);
+  background: rgba(14, 21, 45, 0.85);
+  gap: 16px;
+}
+
+.pdf-modal-footer-info {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.pdf-modal-footer-info strong {
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+.pdf-modal-footer-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pdf-footer-btn-secondary {
+  background: rgba(14, 21, 45, 0.8);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  color: #cbd5e1;
+  padding: 9px 18px;
+  border-radius: 12px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.pdf-footer-btn-secondary:hover {
+  background: rgba(139, 92, 246, 0.2);
+  color: #ffffff;
+  border-color: var(--purple-main);
+}
+
+.pdf-footer-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #7c3aed, #db2777);
+  color: #ffffff;
+  border: none;
+  padding: 9px 20px;
+  border-radius: 12px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition);
+  box-shadow: 0 4px 16px rgba(139, 92, 246, 0.4);
+}
+
+.pdf-footer-btn-primary:hover {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(139, 92, 246, 0.6);
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUpModal {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 /* ==========================================================================
@@ -1677,6 +1966,66 @@ footer {
   
   .what-i-do-title {
     font-size: 3.2rem;
+  }
+
+  /* Ajustes responsive para el botón y modal de CV en móvil */
+  .nav-right .btn-cv {
+    display: none;
+  }
+
+  .mobile-cv-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 14px;
+    width: 100%;
+  }
+
+  .mobile-cv-group .btn-cv {
+    width: 100%;
+    justify-content: center;
+    padding: 11px 16px;
+  }
+
+  .pdf-modal-overlay {
+    padding: 10px;
+  }
+
+  .pdf-modal-container {
+    height: 94vh;
+    border-radius: 16px;
+  }
+
+  .pdf-modal-header {
+    padding: 12px 14px;
+  }
+
+  .pdf-modal-title {
+    font-size: 0.98rem;
+  }
+
+  .pdf-modal-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 12px 14px;
+  }
+
+  .pdf-modal-footer-buttons {
+    width: 100%;
+  }
+
+  .pdf-footer-btn-primary {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 769px) {
+  .btn-cv {
+    padding: 7px 11px;
+    font-size: 0.8rem;
+    gap: 6px;
   }
 }
 
