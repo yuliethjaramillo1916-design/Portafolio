@@ -94,48 +94,13 @@ export default function PdfModal({ isOpen, doc, onClose }) {
           </div>
         </div>
 
-        {/* Cuerpo del Modal: Visor de PDF embebido */}
+        {/* Cuerpo del Modal: Visor de PDF limpio a pantalla completa */}
         <div className="pdf-modal-body">
           <iframe
-            src={`${doc.fileUrl}#toolbar=1&navpanes=0&view=FitH`}
+            src={`${doc.fileUrl}#toolbar=0&navpanes=0&scrollbar=1&view=FitH`}
             title={doc.title}
             className="pdf-modal-iframe"
           />
-          <div className="pdf-modal-fallback-bar">
-            <span>¿Tienes problemas para visualizar el documento?</span>
-            <a 
-              href={doc.fileUrl} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="pdf-fallback-link"
-            >
-              Abrir visor externo
-            </a>
-          </div>
-        </div>
-
-        {/* Pie del Modal */}
-        <div className="pdf-modal-footer">
-          <p className="pdf-modal-footer-info">
-            Visualizando archivo: <strong>{doc.fileName}</strong>
-          </p>
-          <div className="pdf-modal-footer-buttons">
-            <button 
-              type="button" 
-              onClick={onClose} 
-              className="pdf-footer-btn-secondary"
-            >
-              Cerrar
-            </button>
-            <a 
-              href={doc.fileUrl} 
-              download={doc.fileName}
-              className="pdf-footer-btn-primary"
-            >
-              <Download size={16} />
-              <span>Descargar {doc.title}</span>
-            </a>
-          </div>
         </div>
       </div>
     </div>

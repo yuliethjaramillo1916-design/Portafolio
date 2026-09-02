@@ -193,16 +193,20 @@
 
       modalTitle.textContent = config.title;
       modalSubtitle.textContent = config.subtitle;
-      modalFilename.textContent = config.filename;
-      modalIframe.src = `${config.url}#toolbar=1&navpanes=0&view=FitH`;
-      modalFallbackLink.href = config.url;
+      if (modalFilename) modalFilename.textContent = config.filename;
+      modalIframe.src = `${config.url}#toolbar=0&navpanes=0&scrollbar=1&view=FitH`;
+      if (modalFallbackLink) modalFallbackLink.href = config.url;
 
       // Configurar enlaces de descarga
-      modalBtnDownloadTop.href = config.url;
-      modalBtnDownloadTop.setAttribute("download", config.filename);
+      if (modalBtnDownloadTop) {
+        modalBtnDownloadTop.href = config.url;
+        modalBtnDownloadTop.setAttribute("download", config.filename);
+      }
 
-      modalBtnDownloadBottom.href = config.url;
-      modalBtnDownloadBottom.setAttribute("download", config.filename);
+      if (modalBtnDownloadBottom) {
+        modalBtnDownloadBottom.href = config.url;
+        modalBtnDownloadBottom.setAttribute("download", config.filename);
+      }
       if (modalDownloadText) {
         modalDownloadText.textContent = `Descargar ${config.title}`;
       }
