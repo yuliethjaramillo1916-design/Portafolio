@@ -1,77 +1,76 @@
-# 🌐 Portafolio Profesional - Yessica Jaramillo
-> **Tecnóloga en Análisis y Desarrollo de Software (ADSO) - SENA**
+# 🌐 Portafolio Web - Yessica Jaramillo
+> **Aprendiz SENA • Tecnólogo en Análisis y Desarrollo de Software (ADSO)**  
+> *En etapa de formación académica y desarrollo de proyectos prácticos.*
 
-Bienvenido/a al repositorio oficial de mi Portafolio Web. Este espacio centraliza mis proyectos desarrollados, competencias técnicas en desarrollo Full Stack y las aplicaciones que actualmente están en fase de desarrollo.
+Bienvenido/a al repositorio oficial de mi Portafolio. Este espacio reúne los proyectos desarrollados durante mi proceso de aprendizaje en el SENA, así como las soluciones tecnológicas que actualmente tengo en fase de desarrollo.
 
 ---
 
 ## 🚀 ¿Cómo funciona el Portafolio?
 
-El portafolio está construido con una arquitectura moderna:
-- **Frontend:** Desarrollado con **React + Vite** y CSS moderno, optimizado para carga rápida, diseño responsivo, temas oscuros y animaciones interactivas. Permite previsualizar y descargar CV / Hoja de Vida en PDF interactivo y reordenar proyectos mediante Drag & Drop.
-- **Backend:** Desarrollado con **Node.js + Express** para gestionar endpoints API REST de proyectos, mensajes de contacto y auditoría.
+El proyecto está diseñado como una vitrina de aprendizaje interactiva:
+* **Frontend:** Desarrollado con **React y Vite**, con diseño responsivo, tema oscuro, visor interactivo en modal de CV / Hoja de Vida en PDF y tarjetas de proyectos dinámicas.
+* **Backend:** Desarrollado con **Node.js y Express**, encargado de la API de información y la gestión del formulario de contacto.
 
 ---
 
-## 📂 Proyectos Subidos y Funcionalidades
+## 📂 Proyectos Subidos, Funciones y Accesos
 
-A continuación se detallan los proyectos en producción con sus enlaces y accesos de prueba:
+A continuación se describen las plataformas web desarrolladas, sus funciones y los datos de acceso para explorar cada una:
 
-### 1. 🏢 SIGEP-Turnos
-* **Descripción:** Plataforma web en tiempo real para la gestión, organización y asignación de turnos y atención al usuario.
-* **Funciones:** Control de filas de espera en vivo, ventanillas de atención, pantalla pública interactiva para llamado de turnos con sonido/alertas y métricas de atención.
-* **Tecnologías:** React, Node.js, Express, MongoDB, Socket.io, JWT.
-* **Enlace:** [yessica.online/turnos](https://yessica.online/turnos) | **Repositorio:** [SIGEP-Turnos](https://github.com/yuliethjaramillo1916-design/SIGEP-Turnos.git)
-* **Credenciales de prueba / Demo:**
-  * **Rol Administrador:** `admin@turnos.com` | Contraseña: *(Configurada en la plataforma)*
-  * **Rol Operador / Ventanilla:** `operador@turnos.com` | Contraseña: *(Configurada en la plataforma)*
+### 1. 📊 SGDP (Sistema de Gestión y Desarrollo de Procesos)
+* **Descripción:** Plataforma web creada para el seguimiento académico de los aprendices SENA, juicios evaluativos y resultados de aprendizaje (RAP).
+* **Funciones:** Visualización de analíticas de juicios, listado de aprendices, fichas, competencias y estado formativo con gráficos interactivos.
+* **Enlace:** [sgdp.yessica.online](https://sgdp.yessica.online) | **Repositorio:** [GitHub SGDP](https://github.com/yuliethjaramillo1916-design/SGDP.git)
+* **Acceso y Credenciales:**
+  * **Modo de acceso:** Cuenta con **acceso directo** al Dashboard interactivo como *Administrador / Instructor SENA* (no requiere clave para ingresar a explorar la plataforma).
 
 ---
 
-### 2. 🎓 KLASSY
-* **Descripción:** Plataforma web integral para la administración y centralización de procesos académicos institucionales.
-* **Funciones:** Gestión de matrículas, asignaturas, registro de calificaciones, control de asistencia por fechas y reportes académicos según rol.
-* **Tecnologías:** React, Node.js, Express, MySQL / MongoDB, REST APIs.
-* **Enlace:** [klassy.teamfusion.site](https://klassy.teamfusion.site) | **Repositorio:** [Klassy-3.0](https://github.com/sahiramvs162007-oss/Klassy-3.0.git)
-* **Credenciales de prueba / Demo:**
-  * **Rol Administrador:** `admin@klassy.com` | Contraseña: *(Configurada en la plataforma)*
-  * **Rol Docente:** `docente@klassy.com` | Contraseña: *(Configurada en la plataforma)*
-  * **Rol Estudiante:** `estudiante@klassy.com` | Contraseña: *(Configurada en la plataforma)*
+### 2. 🏢 SIGEP-Turnos
+* **Descripción:** Sistema web en tiempo real para la organización, asignación y llamado de turnos de atención al público.
+* **Funciones:** Gestión de filas de espera, ventanillas de servicio, pantalla pública de turnos con alertas sonoras y panel administrativo multi-entidad.
+* **Enlace:** [yessica.online/turnos](https://yessica.online/turnos) | **Repositorio:** [GitHub SIGEP-Turnos](https://github.com/yuliethjaramillo1916-design/SIGEP-Turnos.git)
+* **Acceso y Credenciales:**
+  * **Entidad:** Seleccionar *👑 Acceso Global / Super Administrador*
+  * **Usuario / Correo:** `admin@turnos.com` (o número de documento asignado)
+  * **Clave de Seguridad:** *(Ingresar clave asignada en el despliegue del sistema)*
 
 ---
 
-### 3. 📊 SGDP (Sistema de Gestión y Desarrollo de Procesos)
-* **Descripción:** Sistema de seguimiento y análisis de información académica para aprendices SENA.
-* **Funciones:** Consulta de juicios evaluativos, seguimiento por resultados de aprendizaje (RAP), filtros avanzados e indicadores de rendimiento.
-* **Tecnologías:** React, Node.js, Express, MySQL / MongoDB, REST APIs.
-* **Enlace:** [sgdp.yessica.online](https://sgdp.yessica.online) | **Repositorio:** [SGDP](https://github.com/yuliethjaramillo1916-design/SGDP.git)
-* **Credenciales de prueba / Demo:**
-  * **Rol Administrador / Instructor:** `admin@sgdp.com` | Contraseña: *(Configurada en la plataforma)*
+### 3. 🎓 KLASSY
+* **Descripción:** Solución web para la administración y control de procesos académicos institucionales.
+* **Funciones:** Administración de materias, registro de notas de estudiantes, control de asistencia y paneles personalizados por rol.
+* **Enlace:** [klassy.teamfusion.site](https://klassy.teamfusion.site) | **Repositorio:** [GitHub Klassy](https://github.com/sahiramvs162007-oss/Klassy-3.0.git)
+* **Acceso y Credenciales:**
+  * **Rol Administrador:** Correo: `admin@klassy.com` | Contraseña: *(Clave de acceso)*
+  * **Rol Docente:** Correo: `docente@klassy.com` | Contraseña: *(Clave de acceso)*
+  * **Rol Estudiante:** Correo: `estudiante@klassy.com` | Contraseña: *(Clave de acceso)*
 
 ---
 
-### 🧮 Herramientas Rápidas Integradas
-* **Calculadora:** Operaciones matemáticas con interfaz moderna.
-* **Generador de Contraseñas:** Creación de claves seguras y personalizadas.
-* **Cronómetro:** Control de tiempos con precisión de centésimas.
+### 🧮 Herramientas de Práctica Integradas
+* **Calculadora:** Módulo interactivo para operaciones matemáticas.
+* **Generador de Contraseñas:** Generador de claves seguras con parámetros personalizados.
+* **Cronómetro:** Herramienta de medición de tiempo con precisión.
 
 ---
 
-## 🛠️ Proyectos en Desarrollo
+## 🛠️ Proyectos Actuales en Desarrollo
 
-Actualmente me encuentro desarrollando dos nuevas soluciones técnicas:
+Como parte de mi crecimiento y formación en el SENA, estoy trabajando en los siguientes dos proyectos:
 
 ### 🔍 1. Módulo OCR (Reconocimiento Óptico de Caracteres)
-* **Objetivo:** Sistema inteligente de procesamiento y extracción automatizada de texto a partir de documentos escaneados, imágenes y formularios físicos.
-* **Función:** Permite digitalizar información física en segundos, reconociendo caracteres para guardarlos directamente en la base de datos sin transcripción manual.
+* **¿Qué es?** Un sistema capaz de procesar imágenes y documentos escaneados para reconocer y extraer automáticamente el texto que contienen.
+* **¿Qué función cumple?** Evita tener que digitar datos a mano. Permite tomar fotos de documentos o cargar archivos PDF y digitalizar la información de forma inmediata para guardarla en el sistema.
 
 ### 📱 2. APK Nativa (Aplicación Móvil)
-* **Objetivo:** Aplicación móvil nativa para dispositivos Android que traslada la operatividad de los sistemas web a la palma de la mano.
-* **Función:** Notificaciones push en tiempo real, interfaz rápida y adaptada a pantallas táctiles, acceso offline y sincronización directa con las APIs del backend.
+* **¿Qué es?** Una aplicación móvil instalable para dispositivos Android desarrollada de forma nativa.
+* **¿Qué función cumple?** Llevar las funciones de las plataformas web al celular, con acceso rápido desde el teléfono, notificaciones en tiempo real, interfaz adaptada a pantallas táctiles y conexión directa a las bases de datos.
 
 ---
 
-## 📬 Contacto
-* **Desarrolladora:** Yessica Jaramillo
-* **Rol:** Aprendiz SENA - Análisis y Desarrollo de Software (ADSO)
-* **Portafolio:** [Ver Portafolio Web](https://yessica.online)
+## 👩‍💻 Información de la Aprendiz
+* **Nombre:** Yessica Jaramillo
+* **Programa:** Tecnólogo en Análisis y Desarrollo de Software (ADSO) - SENA
+* **Portafolio en línea:** [https://yessica.online](https://yessica.online)
